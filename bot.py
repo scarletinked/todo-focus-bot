@@ -258,7 +258,7 @@ def _collect_pages(paginator):
 
 
 async def todoist_get_today():
-    paginator = await asyncio.to_thread(todoist.filter_tasks, query="today | overdue")
+    paginator = await asyncio.to_thread(todoist.filter_tasks, query="today | overdue | no date")
     return await asyncio.to_thread(_collect_pages, paginator)
 
 
